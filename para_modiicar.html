@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <title>GazetaAcácio - Página Inicial</title>
+
+    <!-- | Require_Meta_Tags | -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- | Import Bootstrap (CDN) | -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <!-- | Import Jquery (CDN) | -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- | Style_Sheets | -->
+    <link rel="stylesheet" href="./components/css/fonts.css">
+    <link rel="stylesheet" href="./components/css/app.css">
+
+    <!-- | -- Import Sweetalert2 -- | -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- | -- Import / Exports files Javascript Modules -- | -->
+
+
+    <!-- | -- Import Javascripts -- | -->
+    <script src="./components/public/controls.js" defer></script>
+
+    <style>
+      .inputFontColor::placeholder { color: #fefefe79 }
+    </style>
+
+</head>
+<body>
+    <!-- | Views | -->
+    <header>
+        <nav class="navbar colorBlueMarista navbar-dark bg-dark"> <!-- Caso prefira fixada add "fixed-top" nas classes--> 
+        <div class="container-fluid px-5">
+          <div class="navbar-brand logoMarista">
+              <img src="./components/images/gazeta-marista_radio-conexao_branco.png" class="imgLogoPage">
+          </div>
+          <div class="containerButtonsHeader">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="offcanvas offcanvas-end text-bg-dark colorBlueMarista" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h2 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categorias</h2>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <hr>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="">
+                    <i class="bi bi-activity"></i>
+                    Saúde
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-controller"></i>
+                    Entretenimento
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-scooter"></i>
+                    Esportes
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-calendar-heart"></i>
+                    Vida
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-people"></i>
+                    Política
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-person-hearts"></i>
+                    Bem-estar
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a onclick="breve()" class="nav-link fs-5" href="#">
+                    <i class="bi bi-bookmark-check"></i>
+                    Recomendados
+                </i></a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class='bx bxs-filter-alt' ></i>
+                      Autores
+                    </a>
+                    <ul id="containerAuthors" class="dropdown-menu dropdown-menu-dark">
+                    </ul>
+                  </li>
+                </ul>
+                <div class="d-flex" role="search">
+                  <input class="form-control inputFontColor me-2 bg-dark text-bg-dark" id="searchAuthor" type="search" placeholder="Procure por autores" aria-label="Search">
+                  <button id="searchAuthorBtn" class="btn btn-light" type="button">Procurar</button>
+                </div>
+                <br>
+                <div class="resAuthors"></div> -->
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <!-- -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| -->
+
+    <!-- View_News -->
+
+    <main class="containerMain">
+        <header class="headerContainermain">
+            <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <i class="bi bi-question-circle"></i>
+                Quem somos
+            </button>
+            <div class="containerSuport">
+              <button id="btn-suport" class="button">
+                <span>Suporte
+              </span>
+              <span>
+                <i class="bi bi-headset"></i>
+              </span>
+              </button>
+            </div>
+        </header>
+        <hr>
+        <br>
+        <main class="mainContainerPage">
+          <div class="firstRow">
+            <div class="card mb-3 p-1 m-2 cardDark" style="max-width: 90%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./newsPaper/images/news-1_.jpg" class="img-fluid rounded-start" alt="Imagem">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title cardDark-text">BIBLIOTECA LANÇA CLUBE DO LIVRO PARA INCENTIVAR A LEITURA E O DEBATE LITERÁRIO</h5>
+                            <p class="card-text cardDark-text">O Clube do Livro já está em funcionamento e com inscrições abertas até o final do ano...</p>
+                            <a href="./newsPaper/feed/news1.html" class="btn btn-primary">Continuar lendo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="fourRow containerCardsNews d-flex justify-content-around my-3">
+            <div class="card cardResponsive cardEffectHover cardDark" style="width: 18rem;">
+                <img src="./newsPaper/images/news-4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title cardDark-text">Pastoral volta às atividades.</h5>
+                    <hr>
+                    <p class="card-text cardDark-text">A volta da equipe pastoralista foi marcada por uma roda de conversa e início da adaptação dos novos membros do grupo...</p>
+                    <a href="./newsPaper/feed/news2.html" class="btn btn-primary">Visualizar notícia</a>
+                    <br><br>
+                    <div class="card-footer text-body-secondary cardDark-text">
+                </div>
+                </div>
+            </div>
+
+            <div class="card cardResponsive cardEffectHover cardDark" style="width: 18rem;">
+                <img src="./newsPaper/images/news-5_.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title cardDark-text">GOIT: O QUE ACONTECEU NO HACKEATON DE 2024?</h5>
+                    <hr>
+                    <p class="card-text cardDark-text">No dia 30 de novembro de 2024 (sábado) a Escola Social Marista Irmão Acácio sediou o evento de Hackeaton “GoIT”, juntamente com a multinacional Tcs para os alunos do segundo ano do Ensino Médio da instituição...</p>
+                    <a href="./newsPaper/feed/news3.html" class="btn btn-primary">Visualizar notícia</a>
+                    <br><br>
+                    <div class="card-footer text-body-secondary cardDark-text">
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardResponsive cardEffectHover cardDark" style="width: 18rem;">
+                <img src="./newsPaper/images/news-6_.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title cardDark-text">FUNCIONÁRIAS DA TATA REALIZAM PALESTRA NO DIA DAS MULHERES NA TECNOLOGIA.</h5>
+                    <hr>
+                    <p class="card-text cardDark-text">No dia 11 de fevereiro (terça-feira), duas funcionárias da empresa multinacional Tata realizaram uma palestra para o público feminino da Escola Social Marista Ir. Acácio</p>
+                    <a href="./newsPaper/feed/news4.html" class="btn btn-primary">Visualizar notícia</a>
+                    <br><br>
+                    <div class="card-footer text-body-secondary cardDark-text">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card cardResponsive cardEffectHover cardDark" style="width: 18rem;">
+                <img src="./newsPaper/images/news.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title cardDark-text">ESTUDANTES DA ESCOLA SOCIAL GANHAM NOVOS COMPUTADORES EM AÇÃO SOLIDÁRIA DA OAT E EMPRESAS DE TECNOLOGIA</h5>
+                    <hr>
+                    <p class="card-text cardDark-text">No dia 21 de fevereiro, a Escola Social Marista Irmão Acácio recebeu a visita de uma importante iniciativa do projeto OAT, em parceria com uma Empresa Tecnológica. Durante a ação, foram entregues 10 computadores novos a estudantes com interesse na área da tecnologia....</p>
+                    <a href="./newsPaper/feed/news5.html" class="btn btn-primary">Visualizar notícia</a>
+                    <br><br>
+                    <div class="card-footer text-body-secondary cardDark-text">
+                        Vitória Gabrieli Silva de Oliveira (2º ano C)
+                    </div>
+                </div>
+            </div>
+          </div><hr>
+          <div class="twoRow">
+            <div class="row p-5">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card cardDark">
+                        <div class="card-body">
+                            <h5 class="card-title cardDark-text">Visita na Tarobá movimenta a Escola Social Marista Ir. Acácio</h5>
+                            <p class="card-text cardDark-text">A visita Tarobá movimentou nos dias 10, 17 e 24 de março de 2023. Esse movimento aconteceu entre os alunos do primeiro ano do Ensino Médio que estão envolvidos no projeto do Jornal escolar.</p>
+                            <a href="newsPaper/feed/news2.html" class="btn btn-primary">Ver mais...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card cardDark">
+                        <div class="card-body">
+                            <h5 class="card-title cardDark-text">PROJETO LIVRO HUMANO ACONTECE NA SEMANA DA MULHER</h5>
+                            <p class="card-text cardDark-text">O projeto livro humano, nasceu na Dinamarca no ano de 2000, com a intenção de ir contra a violência.</p>
+                            <a href="newsPaper/feed/news3.html" class="btn btn-primary">Ver mais...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="thereRow">
+            <div class="card text-center cardDark">
+                <div class="card-header cardDark-text">
+                    Recomendado
+                </div>
+                <div class="card-body">
+                    <img src="./components/images/logo-unity.png" width="10%" alt="Logo Marista">
+                    <h5 class="card-title cardDark-text">Marista Ir. Acácio</h5>
+                    <p class="card-text cardDark-text">Atendimento a crianças e adolescentes em situação de vulnerabilidade social.</p>
+                    <a target="_blank" href="https://linktr.ee/maristairacacio" class="btn btn-primary">Acessar site</a>
+                    </div>
+                    <div class="card-footer text-body-secondary cardDark-text">
+                    Venha conhecer nossa plataforma online!
+                </div>
+            </div>
+          </div><hr>
+          <div class="responsiveCard-fiveRow">
+            <div class="fiveRow d-flex justify-content-around my-4">
+              <div class="card cardDark cardFiveRow cardEffectHover col-5">
+                  <div class="card-header cardDark-text">
+                      Frase do dia
+                  </div>
+                  <div class="card-body">
+                      <blockquote id="generateQuote" class="blockquote mb-0 cardDark-text"></blockquote>
+                  </div>
+              </div>
+              <div class="card cardDark cardFiveRow cardEffectHover col-5">
+                  <h5 class="card-header cardDark-text">Veja também</h5>
+                  <div class="card-body">
+                      <h5 class="card-title cardDark-text">A INCRÍVEL HISTÓRIA DE CAROLINA MARIA DE JESUS</h5>
+                      <hr>
+                      <a href="newsPaper/feed/news8.html" class="btn btn-primary">Ver mais</a>
+                  </div>
+              </div>
+            </div>
+              <div class="fiveRow d-flex justify-content-around my-4">
+                <div class="card cardDark cardFiveRow cardEffectHover col-5">
+                    <h5 class="card-header cardDark-text">Veja também</h5>
+                    <div class="card-body">
+                        <h5 class="card-title cardDark-text">O RACISMO E A VIOLÊNCIA POLICIAL EM: "O ÓDIO QUE VOCÊ SEMEIA"</h5>
+                        <hr>
+                        <a href="newsPaper/feed/news9.html" class="btn btn-primary">Ver mais</a>
+                    </div>
+                </div>
+  
+                <div class="card cardDark cardFiveRow cardEffectHover col-5">
+                  <h5 class="card-header cardDark-text">Veja também</h5>
+                  <div class="card-body">
+                      <h5 class="card-title cardDark-text">MUSCULAÇÃO A ONDA DO MOMENTO</h5>
+                      <hr>
+                      <a href="newsPaper/feed/news10.html" class="btn btn-primary">Ver mais</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row mb-2 m-5 cardApis">
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary">Clima</strong>
+                  <hr>
+                  <h3 class="mb-0 fs-5 firstLetter">Confira o clima <br> em tempo real <br> em sua cidade</h3>
+                  <div class="mb-1 text-muted">api.openweathermap.org</div>
+                  <hr>
+                  <div class="containerSearch">
+                    <form id="formWeather">
+                      <input id="cityWeather" spellcheck="false" type="text" placeholder="Digite o nome da sua cidade" required>
+                      <button class="btnSearchWeather">
+                        <i class="bi bi-search"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-5 d-lg-block container-res hidden">
+                  <h1 class="res-city"></h1>
+                  <h2 class="res-date"></h2>
+                  <hr>
+                  <div class="iconsWeather">
+                    <img class="iconWeather" width="40%" src="" alt="icon">
+                  </div>
+                  <h1 class="res-temp"></h1>
+                  <hr>
+                  <div class="container-res-minmax">
+                    <h1 class="res-min"></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-auto p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success">Horóscopo</strong>
+                  <h3 class="mb-0">Descubra o seu signo do zodíaco e desvende a sua personalidade única!</h3>
+                  <div class="mb-1 text-muted"><a href="https://www.metropoles.com/vida-e-estilo/horoscopo">Veja mais sobre aqui</a></div>
+                  <hr>
+                  <h3 class="signDay">Signo do dia é <span id="signDay"></span></h3>
+                  <hr>
+                  <h3 class="description"></h3>
+                  <hr>
+                  <h4 class="color">Sua cor do dia é <span id="colorDay"></span></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
+    </main>
+
+    <div class="offcanvas offcanvas-start colorBlue2-Marista" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header cardDark-min">
+            <h5 class="offcanvas-title cardDark-text" id="offcanvasScrollingLabel">
+                About
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+        </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+        <div class="offcanvas-body bg-dark text-light containerOffCanvas colorBlueMarista ">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                <div class="accordion-item cardDark">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button cardDark-min cardDark-text" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                      Quem somos nós?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body aboutbg cardDark-text">
+                      Somos uma equipe dedicada de alunos e professores comprometidos em trazer notícias relevantes e envolventes para a comunidade escolar. Nosso jornal é uma plataforma criada para informar, inspirar e conectar os membros da nossa escola.
+                    </div>
+                  </div>
+                </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+                <div class="accordion-item cardDark">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button cardDark-min cardDark-text collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      Qual nosso objetivos?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body aboutbg cardDark-text">
+                      Bem-vindo ao nosso jornal! Nosso objetivo é trazer notícias relevantes, precisas e inspiradoras para a comunidade escolar. Acreditamos que informação é poder e que uma comunidade bem informada é essencial para o crescimento e o desenvolvimento de todos.
+                    </div>
+                  </div>
+                </div>
+        <!-- ----------------------------------------------------------------------------------------------------------------- -->
+              </div>
+        </div>
+        </div>
+
+    <!-- -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| -->
+
+    <footer class="containerFooter">
+      <div>
+          <img src="./components/images/marista-branco.png" height="64px" alt="Logo">
+      </div>
+      <div class="blockDisplay">
+          <nav>
+              <a href="https://www.instagram.com/maristairacacio"><i class="bi bi-instagram"></i></a>
+          </nav>
+          <hr>
+          <div class="contact-info">
+              <p>Entre em contato:</p>
+              <p>Email: <span class="info-contact">suport.jornalmarista@gmail.com</span></p>
+              <p>Telefone: <span class="info-contact">(43) 99609-0504</span></p>
+          </div>
+      </div>
+      <div>
+          <nav class="pages-site">
+              <a href="#">Página Inicial |</a>
+              <a onclick="clickSuport()" href="#">Contato</a>
+          </nav>
+          <br>
+          <button onclick="shareFacebook('maristairacacio.github.io/GazetaMarista/app/')" class="btn-share" id="share-facebook"><i class="bi bi-facebook"></i> Compartilhar no Facebook</button>
+          <button onclick="shareTwitter('maristairacacio.github.io/GazetaMarista/app/')" class="btn-share" id="share-twitter"><i class="bi bi-twitter"></i> Compartilhar no Twitter</button>
+          <button onclick="shareWhatsapp('maristairacacio.github.io/GazetaMarista/app/')" class="btn-share" id="share-whatsapp"><i class="bi bi-whatsapp"></i> Compartilhar no WhatsApp</button>
+      </div>
+  </footer>
+  
+</body>
+</html>
