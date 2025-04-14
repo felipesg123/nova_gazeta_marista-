@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo do Site">
+        </div>
+        <button class="btn-voltar">Voltar</button>
+    </header>
+
+    <main class="container">
+        <div class="campo-noticia">
+            <!-- Novo campo para imagem da notícia -->
+            <div class="imagem-noticia">
+                <img src="imagem-noticia.jpg" alt="Imagem ilustrativa da notícia">
+            </div>
+            
+            <h1 class="titulo-noticia">Título da Notícia</h1>
+            <p class="autor-noticia">Por Autor da Matéria</p>
+            <div class="texto-noticia">
+                <p>Texto completo da notícia vai aqui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                <p>Mais conteúdo da notícia pode ser adicionado aqui em parágrafos separados.</p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
