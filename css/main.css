@@ -27,19 +27,20 @@ header {
     height: 40px;
 }
 
-.btn-voltar {
-    background-color: #dce73c;
-    color: white;
+.botao  {
+    background-color: #fdc300;
+    color: rgb(77, 77, 77);
     border: none;
-    padding: 8px 15px;
+    padding: 7px 14px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
+    font-size: 12px;
 }
 
-.btn-voltar:hover {
-    background-color: #6f8606;
+.botao:hover {
+    background-color:#d4a300;
 }
 
 /* Conteúdo principal */
