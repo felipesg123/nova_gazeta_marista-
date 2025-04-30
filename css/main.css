@@ -1,92 +1,200 @@
+/* ===== CENTRALIZAÇÃO E BORDAS ===== */
+.noticia.centralizado {
+  text-align: center;
+  border: 3px solid var(--cor-borda); /* Borda mais espessa */
+  padding: 2rem;
+}
 
-/* Reset e estilos gerais */
-* {
+.noticia.centralizado .titulo-noticia,
+.noticia.centralizado .meta-noticia,
+.noticia.centralizado .conteudo-noticia,
+.noticia.centralizado .conteudo-noticia p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.noticia.centralizado .conteudo-noticia {
+  max-width: 800px; /* Limita a largura do texto para melhor leitura */
+}
+
+.noticia.centralizado .imagem-noticia {
+  justify-content: center;
+  margin: 0 auto 2rem;
+  max-width: 90%;
+}
+
+
+
+/* ===== VARIÁVEIS COM TONS DE #333 ===== */
+:root {
+    --cor-primaria: #004080;       /* Cinza escuro principal */
+    --cor-secundaria: #fdc300;     /* Amarelo (mantido para contraste) */
+    --cor-base: #444444;           /* Tom um pouco mais claro que #333 */
+    --cor-texto: #e0e0e0;          /* Cinza claro para texto */
+    --cor-texto-secundario: #aaaaaa;
+    --cor-fundo: #222222;          /* Fundo mais escuro que #333 */
+    --cor-card: #3a3a3a;           /* Card mais claro que #333 mas escuro que #444 */
+    --cor-borda: #555555;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --borda-radius: 8px;
+    --transicao: all 0.3s ease;
+  }
+  
+  /* ===== RESET E ESTILOS GERAIS ===== */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #333;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     line-height: 1.6;
-}
-
-/* Cabeçalho */
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 15px 20px;
+  }
+  
+  /* ===== HEADER ===== */
+  .cabecalho {
+    background-color: var(--cor-primaria);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo img {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--sombra);
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  
+  .logo img {
     height: 40px;
-}
+    width: auto;
+    transition: var(--transicao);
+    filter: brightness(0.9);
+  }
+  
+  .botao-voltar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    padding: 0.5rem 1rem;
+    border-radius: var(--borda-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .botao-voltar:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* ===== CARD DE NOTÍCIA ===== */
+  .noticia {
+    background-color: var(--cor-card);
+    border-radius: var(--borda-radius);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--cor-borda);
+  }
 
-.botao  {
-    background-color: #fdc300;
-    color: rgb(77, 77, 77);
-    border: none;
-    padding: 7px 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    font-size: 12px;
-}
-
-.botao:hover {
-    background-color:#d4a300;
-}
-
-/* Conteúdo principal */
-.container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.campo-noticia {
-    background-color: rgb(161, 161, 161);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Novo estilo para a imagem da notícia */
-.imagem-noticia {
-    margin-bottom: 20px;
-    text-align: center;
+  .imagem-noticia {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: var(--cor-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .imagem-noticia img {
-    max-width: 100%;
+    max-width: 90%; /* Limita a largura máxima */
+    max-height: 390px; /* Limita a altura máxima (um pouco menor que o container) */
     height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: auto;
+    display: block;
+    opacity: 0.9;
+    border: 2px solid var(--cor-borda);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Alterado de 'cover' para 'contain' para mostrar a imagem inteira */
 }
-
-.titulo-noticia {
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-size: 2em;
-}
-
-.autor-noticia {
-    color: #2474ec;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.texto-noticia {
-    color: #34495e;
+  
+  .conteudo-noticia {
+    padding: 2rem;
+  }
+  
+  .titulo-noticia {
+    color: var(--cor-texto);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  
+  .meta-noticia {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  
+  /* ===== TIPOGRAFIA E CONTEÚDO ===== */
+  .conteudo-noticia p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
     line-height: 1.8;
-}
-
-.texto-noticia p {
-    margin-bottom: 15px;
-}
+    color: var(--cor-texto);
+  }
+  
+  .conteudo-noticia a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--cor-secundaria);
+  }
+  
+  .conteudo-noticia a:hover {
+    color: #ffd700;
+    border-bottom-style: solid;
+  }
+  
+  /* ===== RESPONSIVIDADE ===== */
+  @media (max-width: 768px) {
+    .cabecalho {
+      padding: 0.8rem;
+    }
+    
+    .titulo-noticia {
+      font-size: 1.6rem;
+    }
+    
+    .conteudo-noticia {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 1rem;
+    }
+    
+    .titulo-noticia {
+      font-size: 1.3rem;
+    }
+    
+    .conteudo-noticia {
+      padding: 1.2rem;
+    }
+    
+    .logo img {
+      height: 32px;
+    }
+  }

@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #333;
+    background-color: #222222;
     color: #fff;
 }
 
@@ -29,8 +29,8 @@ body {
 
 /* Menu de navegação */
 nav {
-    background-color: #00060c;
-    padding: 15px 0;
+    background-color: #000000;
+    padding: 16px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -48,14 +48,15 @@ nav {
 .menu {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 26px;
 }
 
 .menu li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
+    /* função que troca o tamanho da fonte para garantir maior area para o texto */
     font-size: 14px;
     transition: color 0.3s ease;
 }
