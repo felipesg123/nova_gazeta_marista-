@@ -30,7 +30,7 @@
 :root {
     --cor-primaria: #004080;       /* Cinza escuro principal */
     --cor-secundaria: #fdc300;     /* Amarelo (mantido para contraste) */
-    --cor-base: #444444;           /* Tom um pouco mais claro que #333 */
+    --cor-base: #55555;           /* Tom um pouco mais claro que #333 */
     --cor-texto: #e0e0e0;          /* Cinza claro para texto */
     --cor-texto-secundario: #aaaaaa;
     --cor-fundo: #222222;          /* Fundo mais escuro que #333 */
