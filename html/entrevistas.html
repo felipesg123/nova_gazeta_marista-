@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nova gazeta marista </title>
+    <link rel="stylesheet" href="../css/primcipal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Logos -->
+    <div class="logo-container">
+        <img src="../imagens/gazeta-marista_radio-conexao.png" alt="Logo do Site" class="logo-icone">
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <div class="nav-container">
+            <!-- Menu principal -->
+            <ul class="menu">
+                <li><a href="../index.html">manchetes</a></li>
+                <li><a href="./saude.html">Saúde</a></li>
+                <li><a href="./entretenimento.html">Entretenimento</a></li>
+                <li><a href="./esportes.html">Esportes</a></li>
+                <li><a href="./vida.html">Vida</a></li>
+                <li><a href="./bem_estar.html">Bem-estar</a></li>
+                <li><a href="./recomendados.html">Recomendados</a></li>
+            </ul>
+
+            <!-- Campo de pesquisa -->
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar notícias..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Botão do menu mobile -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu mobile (oculto por padrão) -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="../index.html">manchetes</a></li>
+                <li><a href="./saude.html">Saúde</a></li>
+                <li><a href="./entretenimento.html">Entretenimento</a></li>
+                <li><a href="./esportes.html">Esportes</a></li>
+                <li><a href="./vida.html">Vida</a></li>
+                <li><a href="./bem_estar.html">Bem-estar</a></li>
+                <li><a href="./recomendados.html">Recomendados</a></li>
+            </ul>
+            <div class="mobile-search">
+                <input type="text" placeholder="Pesquisar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Conteúdo principal -->
+<div class="content">
+    <!-- Mantenha seu conteúdo existente -->
+    
+    <!-- Resultados da Busca (inicialmente oculto) -->
+    <div id="searchResultsContainer" style="display:none;">
+        <h2 id="searchResultsTitle">Resultados da busca</h2>
+        <div id="searchResults"></div>
+    </div>
+    
+    <!-- Notícias existentes (exemplo) -->
+    <div class="news-section" id="allNews">
+        <div class="news-card" data-keywords="saúde medicina hospital">
+            <h3>Novas descobertas na medicina</h3>
+            <p>Pesquisadores anunciam avanços no tratamento de doenças...</p>
+        </div>
+        
+</div>
+
+
+
+    <!-- Rodapé completo -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>somos a  equipe de alunos dedicada da radio responsáveis por trazer a as melhores informações sobre o marista e mundo aqui garantimos conteúdo de qualidade tanto apara  os alunos de nossa escola e responsáveis</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>fale conosco</h3>
+                <div class="newsletter">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button>enviar</button>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 gazeta marista . Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
