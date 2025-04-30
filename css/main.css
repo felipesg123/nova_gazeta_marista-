@@ -121,7 +121,6 @@
     height: auto;
     width: auto;
     display: block;
-    opacity: 0.9;
     border: 2px solid var(--cor-borda);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
