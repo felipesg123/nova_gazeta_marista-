@@ -151,7 +151,7 @@
      color: var(--white);
      font-weight: 500;
      text-transform: uppercase;
-     font-size: 0.9rem;
+     font-size: 0.8rem;
      padding: var(--space-xs) 0;
      position: relative;
  }

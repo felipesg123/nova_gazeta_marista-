@@ -1,126 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Meta Tags Essenciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nova gazeta marista </title>
-    <link rel="stylesheet" href="../css/primcipal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <!-- Logos -->
-    <div class="logo-container">
-        <img src="../imagens/gazeta-marista_radio-conexao.png" alt="Logo do Site" class="logo-icone">
-    </div>
+    <link rel="icon"type ="image/svg+xml" href="/imagens/icom.ico">
+    <meta name="description" content="Nova Gazeta Marista - Notícias e informações para a comunidade escolar">
 
-    <!-- Menu de navegação -->
-    <nav>
+    
+    <!-- Título da Página -->
+    <title>Nova Gazeta Marista | Notícias da Escola</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./imagens/favicon.ico" type="image/x-icon">
+    
+    <!-- Folhas de Estilo -->
+    <link rel="stylesheet" href="/css/primcipal.css">
+    
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Pré-conexão para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <!-- Cabeçalho com Logo -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="/imagens/gazeta-marista_radio-conexao.png" 
+                 alt="Logo da Gazeta Marista e Rádio Conexão" 
+                 class="logo-icone">
+        </div>
+    </header>
+
+    <!-- Navegação Principal -->
+    <nav class="navbar">
         <div class="nav-container">
-            <!-- Menu principal -->
+            <!-- Menu Desktop -->
             <ul class="menu">
-                <li><a href="../index.html">manchetes </a></li>
+                <li><a href="/index.html">Últimas Notícias</a></li>
                 <li><a href="./saude.html">Saúde</a></li>
                 <li><a href="./entretenimento.html">Entretenimento</a></li>
-                <li><a href="./vida.html">Vida</a></li>
-                <li><a href="./entrevista.html">entrevista</a></li>
+                <li><a href="./vida.html">Vida Estudantil</a></li>
+                <li><a href="./entrevistas.html">Entrevistas</a></li>
                 <li><a href="./bem_estar.html">Bem-estar</a></li>
                 <li><a href="./recomendados.html">Recomendados</a></li>
-                <li><a href="./html/entrevistas.html">entrevistas</a></li>
             </ul>
 
-            <!-- Campo de pesquisa -->
+            <!-- Barra de Pesquisa -->
             <div class="search-container">
-                <input type="text" placeholder="Pesquisar notícias..." id="searchInput">
-                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <input type="text" 
+                       placeholder="Pesquisar notícias..." 
+                       id="searchInput"
+                       aria-label="Campo de pesquisa de notícias">
+                <button id="searchBtn" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
 
-            <!-- Botão do menu mobile -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <!-- Botão do Menu Mobile -->
+            <button class="mobile-menu-btn" 
+                    id="mobileMenuBtn"
+                    aria-label="Abrir menu mobile"
+                    aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
 
-        <!-- Menu mobile (oculto por padrão) -->
+        <!-- Menu Mobile -->
         <div class="mobile-menu" id="mobileMenu">
             <ul>
-                <li><a href="../index.html">manchetes </a></li>
-                <li><a href="./saude.html">Saúde</a></li>
+                <li><a href="/index.html">Últimas Notícias</a></li>
                 <li><a href="./entretenimento.html">Entretenimento</a></li>
-                <li><a href="./vida.html">Vida</a></li>
-                <li><a href="./entrevista.html">entrevista</a></li>
+                <li><a href="./esportes.html">Esportes</a></li>
+                <li><a href="./vida.html">Vida Estudantil</a></li>
+                <li><a href="./entrevistas.html">Entrevistas</a></li>
                 <li><a href="./bem_estar.html">Bem-estar</a></li>
                 <li><a href="./recomendados.html">Recomendados</a></li>
-                <li><a href="./html/entrevistas.html">entrevistas</a></li>
             </ul>
+            
+            <!-- Pesquisa Mobile -->
             <div class="mobile-search">
-                <input type="text" placeholder="Pesquisar...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" 
+                       placeholder="Pesquisar..."
+                       aria-label="Campo de pesquisa mobile">
+                <button aria-label="Buscar"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </nav>
 
-  <!-- Conteúdo principal -->
-<div class="content">
-    <!-- Mantenha seu conteúdo existente -->
-    
-    <!-- Resultados da Busca (inicialmente oculto) -->
-    <div id="searchResultsContainer" style="display:none;">
-        <h2 id="searchResultsTitle">Resultados da busca</h2>
-        <div id="searchResults"></div>
-    </div>
-    
-    <!-- Notícias existentes (exemplo) -->
-    <div class="news-section" id="allNews">
-        <div class="news-card" data-keywords="saúde medicina hospital">
-            <h3>Novas descobertas na medicina</h3>
-            <p>Pesquisadores anunciam avanços no tratamento de doenças...</p>
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <!-- Container de Resultados da Busca (inicialmente oculto) -->
+        <div id="searchResultsContainer" class="hidden">
+            <h2 id="searchResultsTitle" class="search-results-title">Resultados da busca</h2>
+            <div id="searchResults" class="news-section search-results-grid"></div>
         </div>
-        
-</div>
+
+        <!-- Seção de Todas as Notícias -->
+        <div id="allNews">
+            <h1 class="section-title">Últimas Notícias</h1>
+            
+            <!-- Grid de Notícias -->
+            <div class="news-section">
 
 
+                <!-- esta é uma estrutura base para novas noticias   -->
+                <!-- Adicione mais notícias conforme necessário seguindo o mesmo padrão -->
+                <article class="news-card" data-keywords="exemplo categoria palavras-chave">
+                    <img src="./imagens/imagemDasNoticias/padrao.jpg" 
+                         alt="Descrição da imagem para acessibilidade"
+                        class="news-image">
+                    <div class="news-card-content">
+                    <h3>TÍTULO DA NOTÍCIA EM CAIXA ALTA</h3>
+                    <p>Resumo breve da notícia com as informações principais que aparecerá no card. Limite de aproximadamente 2 linhas...</p>
+                    <a href="./html/noticias/categoria/noticiaX.html" class="read-more-btn">Continuar lendo</a>
+                    </div>
+                </article>  
+                
+                  
+                <!-- Outros cards de notícia... -->
+            </div>
+        </div>
+    </main>
 
-    <!-- Rodapé completo -->
-    <footer>
+    <!-- Rodapé -->
+    <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section">
+            <!-- Seção Sobre Nós -->
+            <section class="footer-section">
                 <h3>Sobre Nós</h3>
-                <p>somos a  equipe de alunos dedicada da radio responsáveis por trazer a as melhores informações sobre o marista e mundo aqui garantimos conteúdo de qualidade tanto apara  os alunos de nossa escola e responsáveis</p>
-            </div>
-            
-            <div class="footer-section">
+                <p>Somos a equipe de alunos dedicados da rádio Conexão, responsáveis por trazer as melhores informações sobre o Marista e o mundo. Garantimos conteúdo de qualidade para alunos e responsáveis.</p>
+            </section>
+
+            <!-- Links Rápidos -->
+            <section class="footer-section">
                 <h3>Links Rápidos</h3>
-                <ul>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Contato</a></li>
+                <ul class="footer-links">
+                    <li><a href="./html/sobre.html">Sobre o Projeto</a></li>
+                    <li><a href="./html/equipe.html">Nossa Equipe</a></li>
+                    <li><a href="./html/contato.html">Contato</a></li>
+                    <li><a href="./html/privacidade.html">Política de Privacidade</a></li>
                 </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>fale conosco</h3>
-                <div class="newsletter">
-                    <input type="email" placeholder="Seu melhor e-mail">
-                    <button>enviar</button>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Redes Sociais</h3>
+            </section>
+
+            <!-- Newsletter -->
+            <section class="footer-section">
+                <h3>Receba Nossa Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" 
+                           placeholder="Seu melhor e-mail" 
+                           required
+                           aria-label="Insira seu e-mail para newsletter">
+                    <button type="submit" class="newsletter-btn">Assinar</button>
+                </form>
+            </section>
+
+            <!-- Redes Sociais -->
+            <section class="footer-section">
+                <h3>Conecte-se</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://spotify.com" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
                 </div>
-            </div>
+            </section>
         </div>
-        
+
+        <!-- Rodapé Inferior -->
         <div class="footer-bottom">
-            <p>&copy; 2023 gazeta marista . Todos os direitos reservados.</p>
+            <p>&copy; <span id="currentYear"></span> Gazeta Marista. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <!-- Scripts JavaScript -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>
