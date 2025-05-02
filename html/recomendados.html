@@ -7,19 +7,19 @@
     <link rel="icon"type ="image/svg+xml" href="/imagens/icom.ico">
     <meta name="description" content="Nova Gazeta Marista - Notícias e informações para a comunidade escolar">
 
-
+    
     <!-- Título da Página -->
     <title>Nova Gazeta Marista | Notícias da Escola</title>
-
+    
     <!-- Favicon -->
     <link rel="icon" href="./imagens/favicon.ico" type="image/x-icon">
-
+    
     <!-- Folhas de Estilo -->
     <link rel="stylesheet" href="/css/primcipal.css">
-
+    
     <!-- Font Awesome para Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    
     <!-- Pré-conexão para melhor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,8 +29,8 @@
     <!-- Cabeçalho com Logo -->
     <header class="header">
         <div class="logo-container">
-            <img src="/imagens/gazeta-marista_radio-conexao.png"
-                 alt="Logo da Gazeta Marista e Rádio Conexão"
+            <img src="/imagens/gazeta-marista_radio-conexao.png" 
+                 alt="Logo da Gazeta Marista e Rádio Conexão" 
                  class="logo-icone">
         </div>
     </header>
@@ -43,16 +43,16 @@
                 <li><a href="/index.html">Últimas Notícias</a></li>
                 <li><a href="./saude.html">Saúde</a></li>
                 <li><a href="./entretenimento.html">Entretenimento</a></li>
-                <li><a href="./esportes.html">Esportes</a></li>
                 <li><a href="./vida.html">Vida Estudantil</a></li>
                 <li><a href="./entrevistas.html">Entrevistas</a></li>
                 <li><a href="./bem_estar.html">Bem-estar</a></li>
+                <li><a href="./recomendados.html">Recomendados</a></li>
             </ul>
 
             <!-- Barra de Pesquisa -->
             <div class="search-container">
-                <input type="text"
-                       placeholder="Pesquisar notícias..."
+                <input type="text" 
+                       placeholder="Pesquisar notícias..." 
                        id="searchInput"
                        aria-label="Campo de pesquisa de notícias">
                 <button id="searchBtn" aria-label="Buscar">
@@ -61,7 +61,7 @@
             </div>
 
             <!-- Botão do Menu Mobile -->
-            <button class="mobile-menu-btn"
+            <button class="mobile-menu-btn" 
                     id="mobileMenuBtn"
                     aria-label="Abrir menu mobile"
                     aria-expanded="false">
@@ -73,17 +73,17 @@
         <div class="mobile-menu" id="mobileMenu">
             <ul>
                 <li><a href="/index.html">Últimas Notícias</a></li>
-                <li><a href="./saude.html">Saúde</a></li>
                 <li><a href="./entretenimento.html">Entretenimento</a></li>
                 <li><a href="./esportes.html">Esportes</a></li>
                 <li><a href="./vida.html">Vida Estudantil</a></li>
                 <li><a href="./entrevistas.html">Entrevistas</a></li>
                 <li><a href="./bem_estar.html">Bem-estar</a></li>
+                <li><a href="./recomendados.html">Recomendados</a></li>
             </ul>
-
+            
             <!-- Pesquisa Mobile -->
             <div class="mobile-search">
-                <input type="text"
+                <input type="text" 
                        placeholder="Pesquisar..."
                        aria-label="Campo de pesquisa mobile">
                 <button aria-label="Buscar"><i class="fas fa-search"></i></button>
@@ -102,53 +102,35 @@
         <!-- Seção de Todas as Notícias -->
         <div id="allNews">
             <h1 class="section-title">recomendados</h1>
-
+            
             <!-- Grid de Notícias -->
             <div class="news-section">
 
-                
-                <div class="news-section">
-                    
-                        <!-- esta é uma estrutura base para novas noticias
-                        Adicione mais notícias conforme necessário seguindo o mesmo padrão
-                        <article class="news-card" data-keywords="exemplo categoria palavras-chave">
-                            <img src="./imagens/imagemDasNoticias/padrao.jpg"
-                                 alt="Descrição da imagem para acessibilidade"
-                                class="news-image">
-                            <div class="news-card-content">
-                            <h3>TÍTULO DA NOTÍCIA EM CAIXA ALTA</h3>
-                            <p>Resumo breve da notícia com as informações principais que aparecerá no card. Limite de aproximadamente 2 linhas...</p>
-                            <a href="./html/noticias/categoria/noticiaX.html" class="read-more-btn">Continuar lendo</a>
-                            </div>
-                        </article> -->
+     <!-- Card de Notícia 1 -->
+     <article class="news-card" data-keywords="Biblioteca clube do livro leitura debate literário">
+        <img src="/imagens/imagemDasNoticias/news-9_1.jpeg"
+             alt="Estudantes participando do clube do livro na biblioteca"
+             class="news-image">
+        <div class="news-card-content">
+            <h3>BIBLIOTECA LANÇA CLUBE DO LIVRO PARA INCENTIVAR A LEITURA</h3>
+            <p>A ideia de criar um Clube do Livro partiu da bibliotecária Tamires, que percebeu a necessidade de um projeto exclusivo da biblioteca escolar...</p>
+            <a href="/html/noticias/recomendados/noticia0.html" class="read-more-btn">Continuar lendo</a>
+        </div>
+    </article>
 
 
 
-                    <!-- Card de Notícia 1 -->
-                    <article class="news-card" data-keywords="Biblioteca clube do livro leitura debate literário">
-                        <img src="/imagens/imagemDasNoticias/news-9_1.jpeg"
-                             alt="Estudantes participando do clube do livro na biblioteca"
-                             class="news-image">
-                        <div class="news-card-content">
-                            <h3>BIBLIOTECA LANÇA CLUBE DO LIVRO PARA INCENTIVAR A LEITURA</h3>
-                            <p>A ideia de criar um Clube do Livro partiu da bibliotecária Tamires, que percebeu a necessidade de um projeto exclusivo da biblioteca escolar...</p>
-                            <a href="/html/noticias/recomendados/noticia0.html" class="read-more-btn">Continuar lendo</a>
-                        </div>
-                    </article>
-
-
-
-               <!-- Card de Notícia 2 -->
-               <article class="news-card" data-keywords="OAT computadores doação tecnologia ação social">
-                <img src="/imagens/imagemDasNoticias/news-13.jpg" 
-                    alt="Estudantes recebendo computadores novos"
-                    class="news-image">
-                <div class="news-card-content">
-                <h3>ESTUDANTES GANHAM NOVOS COMPUTADORES EM AÇÃO SOLIDÁRIA</h3>
-               <p>No dia 21 de fevereiro, a Escola Social Marista Irmão Acácio recebeu a visita de uma importante iniciativa do projeto OAT, em parceria com uma Empresa Tecnológica...</p>
-               <a href="/html/noticias/recomendados/noticia1.html" class="read-more-btn">Continuar lendo</a>
-              </div>
-           </article>
+    <!-- Card de Notícia 2 -->
+    <article class="news-card" data-keywords="OAT computadores doação tecnologia ação social">
+        <img src="/imagens/imagemDasNoticias/news-13.jpg" 
+            alt="Estudantes recebendo computadores novos"
+           class="news-image">
+        <div class="news-card-content">
+        <h3>ESTUDANTES GANHAM NOVOS COMPUTADORES EM AÇÃO SOLIDÁRIA</h3>
+        <p>No dia 21 de fevereiro, a Escola Social Marista Irmão Acácio recebeu a visita de uma importante iniciativa do projeto OAT, em parceria com uma Empresa Tecnológica...</p>
+        <a href="/html/noticias/recomendados/noticia1.html" class="read-more-btn">Continuar lendo</a>
+        </div>
+    </article>
 
 
 
@@ -181,8 +163,8 @@
             <section class="footer-section">
                 <h3>Receba Nossa Newsletter</h3>
                 <form class="newsletter-form">
-                    <input type="email"
-                           placeholder="Seu melhor e-mail"
+                    <input type="email" 
+                           placeholder="Seu melhor e-mail" 
                            required
                            aria-label="Insira seu e-mail para newsletter">
                     <button type="submit" class="newsletter-btn">Assinar</button>
