@@ -1,77 +1,82 @@
-# gazeta marista 
-<br>
+# README - Site Gazeta Marista
+
+## 1. Descrição
+portal de noticias do marista irmão acaciao  focado em traser a cobertura de eventos e duto que aconteseu no marista da melhor forma 
+
+## 2. Recursos e Funcionalidades
+- Seções temáticas independentes (HTML dedicado para cada categoria)
+- Design responsivo (3 arquivos CSS com estilos complementares)
+- Galeria de imagens organizada por tipo de conteúdo
+- Interações dinâmicas via script.js
 
 
-# 1. Descrição
+## 3. Tecnologias
+
+ - Componente	Tecnologia	
+
+  - Frontend   HTML5, CSS3, JS 
+
+ - Estilização 	CSS puro 	
+
+ - Imagens	 PNG/JPEG 
+
+ 
+
+## . Roadmap e Melhorias Futuras
+
+
+- Implementar sistema de comentários
+
+- Adicionar modo escuro
+
+- Otimizar carregamento de imagens lazy-load@@   
 
 
 
-<br>
+### 4. Estrutura de Pastas (Detalhada)
 
-# 2. Recursos e Funcionalidades
+```bash
 
-<br>
+root/
+├── css/
+│   ├── estilo.css       # Reset + estilos base 
+│   ├── main.css         # Layout principal
+│   └── principal.css    # Componentes UI
+├── html/
+│   ├── noticias/        # Todas as categorias
+│   │   ├── [nome].html  # 7 arquivos existentes
+│   └── area.html        # Seção especial
+├── imagens/
+│   ├── imagemDasNoticias/ # Capas de artigos
+│   ├── demenro*.png     # Imagens decorativas
+│   └── logo*.png        # Assets de marca
+├── script.js            # Lógica principal
+└── index.html           # Homepage
 
-# 3. Instalação
+```
 
-<br>
+<br><br><br>
 
-# 4. Contribuição
+## 5. Instalação
 
-<br>
+```bash
 
-# 5. 💻 Tecnologias utilisadas
+1- # Pré-requisitos:
+- Navegador moderno (Chrome 115+/Firefox 110+)
+- Editor de código (VS Code recomendado)
 
-- Frontend: 
-  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="16" height="16"/> HTML5 
-  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="16" height="16"/> CSS3
-  - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="16" height="16"/> JavaScript
+2- # Passos:
+1. git clone [https://github.com/felipesg123/nova_gazeta_marista-.git]
+2. Abrir index.html como entry point
+3. Para desenvolvimento:
+   - Editar CSS em /css/
+   - Adicionar páginas em /html/noticias/
+   - Assets visuais em /imagens/
 
-- apis utilisadas :
-   - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg" width="16" width="16" height="16"/> cloudflare
-                    
+```
 
-# 6. estrutura de pastas do cite 
+  
 
-### gazeta-marista
-
-``` bash
-├── css/                   # Folhas de estilo
-│   ├── estib.css          # Estilos base
-│   ├── main.css           # Estilos gerais
-│   └── principal.css      # Estilos da página principal
-│
-├── html/                 # Páginas HTML
-│   ├── noticias/         # Notícias por categoria
-│   │   ├── bem.estar/    # Arquivos de bem-estar
-│   │   ├── entretenimento/
-│   │   ├── entrevistas/
-│   │   ├── esportes/
-│   │   ├── recomendados/
-│   │   ├── saude/
-│   │   └── vida/
-│   │
-│   ├── bem.estar.html     # Página da categoria
-│   ├── entretenimento.html
-│   ├── entrevistas.html
-│   ├── esportes.html
-│   ├── recomendados.html
-│   ├── saude.html
-│   └── vida.html
-│
-├── imagens/              # Assets visuais
-│   ├── banners/
-│   ├── icons/
-│   └── thumbnails/
-│
-├── js/                   # Scripts JavaScript
-│   ├── main/             # Scripts principais
-│   │   └── script.js     # Funcionalidades core
-│   └── modules/          # Módulos separados
-│
-├── index.html            # Página inicial
-├── para.modificar.html   # Template base
-└── README.md            # Documentação
 
 
 
