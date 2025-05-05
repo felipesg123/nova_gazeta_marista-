@@ -1,7 +1,7 @@
 # README - Site Gazeta Marista
 
 ## 1. Descrição
-portal de noticias do marista irmão acaciao  focado em traser a cobertura de eventos e duto que aconteseu no marista da melhor forma 
+Portal de notícias do Colégio Marista Irmão Acácio  focado em trazer a cobertura de eventos e tudo que acontece no dia a dia da escola da melhor forma. 
 
 ## 2. Recursos e Funcionalidades
 - Seções temáticas independentes (HTML dedicado para cada categoria)
