@@ -29,7 +29,9 @@ Portal de notícias do Colégio Marista Irmão Acácio  focado em trazer a cober
 
 - Adicionar modo escuro
 
-- Otimizar carregamento de imagens lazy-load@@   
+- Otimizar carregamento de imagens lazy-load@@
+
+- fazer integração com  um bano de dados
 
 
 
