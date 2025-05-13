@@ -29,7 +29,7 @@
 :root {
   /* Substituição direta pelas variáveis do código base */
   --cor-primaria: #163A59;         /* --primary-color */
-  --cor-secundaria: #FF6B35;       /* --secondary-color */
+  --cor-secundaria: #fdc300;       /* --secondary-color */
   --cor-base: #EEEE;             /* --medium-gray */
   --cor-texto: #222222;            /* --dark-gray */
   --cor-texto-secundario: #444444;  /* --medium-gray */
