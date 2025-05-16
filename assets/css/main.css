@@ -28,7 +28,7 @@
 /* ===== VARIÁVEIS COM TONS DE #333 ===== */
 :root {
   /* Substituição direta pelas variáveis do código base */
-  --cor-primaria: #163A59;         /* --primary-color */
+  --cor-primaria: #11385a;         /* --primary-color */
   --cor-secundaria: #fdc300;       /* --secondary-color */
   --cor-texto: #222222;            /* --dark-gray */
   --cor-texto-secundario: #444444;  /* --medium-gray */
