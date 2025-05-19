@@ -1,21 +1,23 @@
 /* ===== CENTRALIZAÇÃO E BORDAS ===== */
 .noticia.centralizado {
-  text-align: center;
-  border: 3px solid var(--cor-borda); /* Borda mais espessa */
+  text-align: left; /* Mudança de center para left */
+  border: 3px solid var(--cor-borda);
   padding: 2rem;
+  max-width: 1200px; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza o bloco na página, mas o conteúdo fica à esquerda */
 }
 
 .noticia.centralizado .titulo-noticia,
 .noticia.centralizado .meta-noticia,
 .noticia.centralizado .conteudo-noticia,
 .noticia.centralizado .conteudo-noticia p {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left; /* Mudança de center para left */
+  margin-left: 0; /* Remove o auto */
+  margin-right: 0; /* Remove o auto */
 }
 
 .noticia.centralizado .conteudo-noticia {
-  max-width: 800px; /* Limita a largura do texto para melhor leitura */
+  max-width: 100%; /* Remove a limitação fixa de largura */
 }
 
 .noticia.centralizado .imagem-noticia {
