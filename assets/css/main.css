@@ -50,7 +50,7 @@
   }
   
   body {
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "DM Serif Display", serif;
     font-optical-sizing: auto;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
@@ -81,6 +81,7 @@
   }
   
   .botao-voltar {
+     font-family: "Source Sans 3", sans-serif;
     background-color: var(--secondary-color); /* #FF6B35 */
     color: var(--white);                    /* #FFFFFF */
     background-color: var(--cor-secundaria);
@@ -147,6 +148,7 @@
   }
   
   .titulo-noticia {
+     font-family: "Source Sans 3", sans-serif;
     color: var(--cor-texto);
     color: var(--primary-dark);  
     font-size: 2rem;
