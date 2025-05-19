@@ -50,7 +50,8 @@
   }
   
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
